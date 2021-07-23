@@ -9,3 +9,6 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 - chalk v4.1.1 `npm install chalk`
 - dotenv v10.0.0 `npm install dotenv`
 - mongoose v5.13.3 `npm install mongoose`
+
+# Changelog
+- 23/07/2021: Updated settings.js various bug fixes and added 2 translations to messages.json
