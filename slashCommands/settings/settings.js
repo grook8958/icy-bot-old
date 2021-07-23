@@ -91,17 +91,17 @@ async function view(interaction) {
     const prefixChangeButton = new MessageButton()
       .setCustomId('prefix-button')
       .setEmoji('❓')
-      .setLabel('Change Prefix')
+      .setLabel(messages.CHANGE_PREFIX_BTN[lang])
       .setStyle('PRIMARY');
 
     const languageChangeButton = new MessageButton()
       .setCustomId('language-button')
       .setEmoji('🌍')
-      .setLabel('Change language')
+      .setLabel(messages.CHANGE_LANGUAGE_BTN[lang])
       .setStyle('PRIMARY');
     const resetDefaults = new MessageButton()
       .setCustomId('reset-defaults-button')
-      .setLabel('Reset Settings')
+      .setLabel(messages.RESET_SETTINGS_BTN[lang])
       .setStyle('DANGER');
     const row = new MessageActionRow()
       .addComponents([prefixChangeButton, languageChangeButton]);
@@ -541,9 +541,9 @@ async function resetToDefault(interaction) {
   });
 
   const filter = i => i.isButton() && i.user.id === interaction.user.id
-  const collector = await createMessageComponentCollector({filter, time: 15000});
+  const collector = channel.createMessageComponentCollector({filter, time: 15000});
 
-  collector.on('collect', i => {
+  collector.on('collect', async i => {
 
     const resetSettingsButton = new MessageButton()
       .setCustomId('reset-settings-button')
@@ -558,9 +558,43 @@ async function resetToDefault(interaction) {
     const resRow = new MessageActionRow()
       .addComponents([resetSettingsButton, cancelButton]);
 
+      const languageSchema = require('../../schemas/language-schema');
+      const prefixSchema = require('../../schemas/prefix-schema');
+
     switch(i.customId) {
       case('reset-settings-button'):
-        //Do stuff
+        //Reset Settings
+        const defaultLang = 'english';
+        const defaultPrefix = "!";
+
+        //Update options in database
+
+        await prefixSchema.findOneAndUpdate({
+          _id: i.guild.id
+        }, {
+          _id: i.guild.id,
+          prefix: defaultPrefix
+        }, {
+          upsert: true
+        });
+
+        await languageSchema.findOneAndUpdate({
+          _id: i.guild.id
+        }, {
+          _id: i.guild.id,
+          language: defaultLang
+        }, {
+          upsert: true
+        });
+
+        i.update({
+          embeds: [successEmbed(messages.RESET_SETTINGS_SUCCESS[lang])],
+          components: [resRow]
+        });
+
+        await wait(3000);
+        view(interaction);
+
         break;
       case('cancel-button'):
         
@@ -568,8 +602,8 @@ async function resetToDefault(interaction) {
           embeds: [errorEmbed(messages.CANCELLED[lang])],
           components: [resRow]
         })
-        wait(3000)
-        view(interaction)
+        await wait(3000);
+        view(interaction);
         break;
     };
   });

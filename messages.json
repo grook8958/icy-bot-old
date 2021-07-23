@@ -108,5 +108,23 @@
     "french": "Réinitialiser les Paramètres",
     "spanish": "Restablecer Ajustes",
     "german": "Einstellungen Zsurücksetzen"
+  },
+  "RESET_SETTINGS_SUCCESS": {
+    "english": "Successfully reseted all settings.",
+    "french": "Réinitialisation réussie de tous les paramètres.",
+    "spanish": "Reseteado con éxito todos los ajustes.",
+    "german": "Alle Einstellungen wurden erfolgreich zurückgesetzt."
+  },
+  "CHANGE_LANGUAGE_BTN": {
+    "english": "Change Language",
+    "french": "Changer la Langue",
+    "spanish": "Cambiar el idioma",
+    "german": "Sprache ändern"
+  },
+  "CHANGE_PREFIX_BTN": {
+    "english": "Change Prefix",
+    "french": "Changer le Préfixe",
+    "spanish": "Prefijo de Cambio",
+    "german": "Präfix ändern"
   }
 }
