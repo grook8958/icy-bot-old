@@ -1,0 +1,18 @@
+{
+  "name": "icy-bot",
+  "version": "1.0.0",
+  "description": "A multi-purpose bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord.js": "^13.0.0-dev.5e70694.1626955541",
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.13.3"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "PERMISSION_ERROR": {
+    "english": "You must have `{PERMS}` to run this command.",
+    "french": "Vous avez besoin de `{PERMS}` pour éxécuter cette commande.",
+    "spanish": "Debe tener `{PERMS}`para ejecutar este comando.",
+    "german": "Sie benötigen `{PERMS}`, um diesen Befehl ausführen zu können."
+  },
+  "LANGUAGE_NOT_SUPPORTED": {
+    "english": "`{LANG}` is not a supported language.",
+    "french": "`{LANG}` n’est pas une langue prise en charge.",
+    "spanish": "`{LANG}` no es un idioma compatible.",
+    "german": "`{LANG}` ist keine unterstützte Sprache."
+  },
+  "LANGUAGE_SET": {
+    "english": "Successfully set the new language to english.",
+    "french": "La langue est maintenant le Français.",
+    "spanish": "Establecer correctamente el nuevo idioma en español.",
+    "german": "Die neue Sprache erfolgreich auf Deutsch setzen."
+  },
+  "LANGUAGE_SELECT": {
+    "english": "Select the new language.",
+    "french": "Choisisez la nouvelle langue.",
+    "spanish": "Seleccione el nuevo idioma.",
+    "german": "Wählen Sie die neue Sprache aus."
+  },
+  "CANCEL": {
+    "english": "Cancel",
+    "french": "Annuler",
+    "german": "Abbrechen",
+    "spanish": "Cancelar"
+  },
+  "CANCELLED": {
+    "english": "Cancelled",
+    "french": "Annuler",
+    "spanish": "Anulado",
+    "german": "Abgebrochen"
+  },
+  "LANGUAGES": {
+    "english": "English",
+    "french": "Français",
+    "spanish": "Español",
+    "german": "Deutsch"
+  },
+  "SETTINGS_EMBED": {
+    "TITLE": {
+      "english": "Server Settings",
+      "french": "Parametre du serveur",
+      "spanish": "Configuración del servidor",
+      "german": "Servereinstellungen"
+    },
+    "LANGUAGE": {
+      "TITLE": {
+        "english": "Language :",
+        "french": "Langue :",
+        "spanish": "Idioma :",
+        "german": "Sprache :"
+      }
+    },
+    "PREFIX": {
+      "TITLE": {
+        "english": "Prefix :",
+        "french": "Prefixe :",
+        "spanish": "Prefijo :",
+        "german": "Präfix :"
+      }
+    }
+  },
+  "PREFIX_TOO_LONG": {
+    "english": "The new prefix must be less than 3 characters long.",
+    "french": "Le nouveau préfixe doit comporter moins de 3 caractères.",
+    "spanish": "El nuevo prefijo debe tener menos de 3 caracteres.",
+    "german": "Das neue Präfix muss weniger als 3 Zeichen lang sein."
+  },
+  "PREFIX_SET": {
+    "english": "Successfully set the new server prefix to `{PREFIX}`.",
+    "french": "Le prefix du serveur est maintenant `{PREFIX}`.",
+    "spanish": "Estableció correctamente el nuevo prefijo del servidor en `{PREFIX}`.",
+    "german": "Setzen Sie das neue Serverpräfix erfolgreich auf `{PREFIX}`."
+  },
+  "PREFIX_MESSAGE": {
+    "english": "Select the new prefix.",
+    "french": "Sélectionnez le nouveau préfixe.",
+    "spanish": "Seleccione el nuevo prefijo.",
+    "german": "Wählen Sie das neue Präfix aus."
+  },
+  "AUTO_CANCEL": {
+    "english": "This will automaticaly cancel after {SEC} seconds.",
+    "french": "Cela s'annulera automatiquement après {SEC} secondes.",
+    "spanish": "Esto se cancelará automáticamente después de {SEC} segundos.",
+    "german": "Dies wird nach {SEC} Sekunden automatisch abgebrochen."
+  },
+  "RESET_SETTINGS_EMBED": {
+    "TITLE": {
+      "english": "Hold up! Are you sure you want to do this?",
+      "french": "Attendez! Êtes-vous sûre de vouloir faire ça?",
+      "spanish": "¡Espera! ¿Estás seguro de querer hacerlo?",
+      "german": "Warte! Bist du sicher, dass du das tun willst?"
+    },
+    "DESCRIPTION": {
+      "english": "This will reset all current setting to its default. This cannot be undone.",
+      "french": "Cela réinitialisera tous les paramètres actuels à leur valeur par défaut. Cela ne peut pas être annulé.",
+      "spanish": "Esto restablecerá toda la configuración actual a su configuración predeterminada. Esto no se puede deshacer.",
+      "german": "Dies setzt alle aktuellen Einstellungen auf seine Standardeinstellung zurück. Dies kann nicht rückgängig gemacht werden."
+    }
+  },
+  "RESET_SETTINGS_BTN": {
+    "english": "Reset Settings",
+    "french": "Réinitialiser les Paramètres",
+    "spanish": "Restablecer Ajustes",
+    "german": "Einstellungen Zsurücksetzen"
+  }
+}

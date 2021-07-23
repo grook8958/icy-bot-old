@@ -1,0 +1,12 @@
+{
+    "colors": {
+        "error": "#ff0000",
+        "success": "#63ba6c",
+        "default": "#6b9be8"
+    },
+    "emojis": {
+        "error": "<:deny:836758750483709952>",
+        "success": "<:allow:836758750391304222>",
+        "gear": "<:settings:836758750047240223>"
+    }
+}
