@@ -6,7 +6,7 @@
  */
 
  const { Permissions } = require('discord.js')
-const { prefix } = require('../config.json')
+
  const errorEmbed = require('../functions/error-embed')
  
  const validatePermissions = (permissions) => {
@@ -80,59 +80,64 @@ const { prefix } = require('../config.json')
    }
  
    // Listen for messages
-   client.on('messageCreate', (message) => {
-     const { member, content, guild } = message
+   client.on('messageCreate', async (message) => {
+      const { member, content, guild } = message;
+      
+      const getPrefix = require('../functions/get-prefix');
+      require('dotenv').config();
+
+      const prefix = await getPrefix(guild.id) || process.env.DEFAULT_PREFIX;
+
+      for (const alias of commands) {
+        const command = `${prefix}${alias.toLowerCase()}`
  
-     for (const alias of commands) {
-       const command = `${prefix}${alias.toLowerCase()}`
+        if (
+          content.toLowerCase().startsWith(`${command} `) ||
+          content.toLowerCase() === command
+        ) {
+          // A command has been ran
  
-       if (
-         content.toLowerCase().startsWith(`${command} `) ||
-         content.toLowerCase() === command
-       ) {
-         // A command has been ran
+          // Ensure the user has the required permissions
+          for (const permission of permissions) {
+            if (!member.permissions.has(Permissions.FLAGS[permission])) {
+              errorEmbed(permissionError, message)
+              return
+            }
+          }
  
-         // Ensure the user has the required permissions
-         for (const permission of permissions) {
-           if (!member.permissions.has(Permissions.FLAGS[permission])) {
-             errorEmbed(permissionError, message)
-             return
-           }
-         }
+          // Ensure the user has the required roles
+          for (const requiredRole of requiredRoles) {
+            const role = guild.roles.cache.find(
+              (role) => role.name === requiredRole
+            )
  
-         // Ensure the user has the required roles
-         for (const requiredRole of requiredRoles) {
-           const role = guild.roles.cache.find(
-             (role) => role.name === requiredRole
-           )
+            if (!role || !member.roles.cache.has(role.id)) {
+              errorEmbed(`You must have the "${requiredRole}" role to use this command.`, message)
+              return
+            }
+          }
  
-           if (!role || !member.roles.cache.has(role.id)) {
-             errorEmbed(`You must have the "${requiredRole}" role to use this command.`, message)
-             return
-           }
-         }
+          // Split on any number of spaces
+          const arguments = content.split(/[ ]+/)
  
-         // Split on any number of spaces
-         const arguments = content.split(/[ ]+/)
+          // Remove the command which is the first index
+          arguments.shift()
  
-         // Remove the command which is the first index
-         arguments.shift()
+          // Ensure we have the correct number of arguments
+          if (
+            arguments.length < minArgs ||
+            (maxArgs !== null && arguments.length > maxArgs)
+          ) {
+            errorEmbed(`Incorrect syntax! Use ${prefix}${alias} ${expectedArgs}`, message)
+            return
+          }
  
-         // Ensure we have the correct number of arguments
-         if (
-           arguments.length < minArgs ||
-           (maxArgs !== null && arguments.length > maxArgs)
-         ) {
-           errorEmbed(`Incorrect syntax! Use ${prefix}${alias} ${expectedArgs}`, message)
-           return
-         }
+          // Handle the custom command code
+          callback(message, arguments, arguments.join(' '), client)
  
-         // Handle the custom command code
-         callback(message, arguments, arguments.join(' '), client)
- 
-         return
-       }
-     }
-   })
- }
+          return
+        }
+      }
+    })
+  }
  
