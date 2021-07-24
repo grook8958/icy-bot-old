@@ -126,5 +126,59 @@
     "french": "Changer le Préfixe",
     "spanish": "Prefijo de Cambio",
     "german": "Präfix ändern"
+  },
+  "NO_REASON_PROVIDED": {
+    "english": "No reason provided",
+    "french": "Aucun motif fourni",
+    "spanish": "Da ninguna razón",
+    "german": "Ohne bestehende Gründe"
+  },
+  "BAN_DM": {
+    "english": "**You have been banned from {GUILD} for:**\n{REASON}",
+    "french": "**Vous avez été banni de {GUILD} pour :**\n{REASON}",
+    "spanish": "**Se le ha prohibido el acceso a {GUILD} por:**\n{REASON}",
+    "german": "**Du wurdest aus {GUILD} verbannt für:**\n{REASON}"
+  },
+  "BAN_SUCCESS": {
+    "english": "**Succesfully banned {MEMBER}** || {REASON}",
+    "french": "Banni avec succès {MEMBER}** || {REASON}",
+    "spanish": "**Prohibido con éxito {MEMBER}** || {REASON}",
+    "german": "**Erfolgreich verboten {MEMBER}** || {REASON}"
+  },
+  "UNBAN_SUCCESS": {
+    "english": "**Successfully unbanned {USER}** || {REASON}",
+    "french": "**Dé-banni avec succès {USER}** || {REASON}",
+    "spanish": "**Desaprendido con éxito {USER}** || {REASON}",
+    "german": "**Erfolgreiche Freigabe {USER}** || {REASON}"
+  },
+  "BAN_FAIL": {
+    "english": "I cannot ban this user, this is due to missing permission or the user does not exist",
+    "french": "Je ne peux pas bannir cet utilisateur, cela est dû à une permission manquante ou l’utilisateur n’existe pas",
+    "spanish": "No puedo prohibir este usuario, esto se debe a falta de permiso o el usuario no existe",
+    "german": "Ich kann diesen Benutzer nicht verbieten, dies liegt an fehlenden Berechtigungen oder der Benutzer existiert nicht"
+  },
+  "CANNOT_BAN": {
+    "english": "You cannot ban this user.",
+    "french": "Vous ne pouvez pas bannir cet utilisateur.",
+    "spanish": "Sie können diesen Benutzer nicht verbieten.",
+    "german": "Sie können diesen Benutzer nicht verbieten."
+  },
+  "CANNOT_DM": {
+    "english": "I was not able to DM this user",
+    "french": "Je n’ai pas pu MP cet utilisateur",
+    "spanish": "No fui capaz de 'DM' este usuario",
+    "german": "Ich konnte diesen Benutzer nicht 'DM'"
+  },
+  "UNBAN_FAIL": {
+    "english": "I cannot unban this user, this is due to missing permission or the user does not exist",
+    "french": "Je ne peux pas dé-bannir cet utilisateur, cela est dû à une permission manquante ou l’utilisateur n’existe pas",
+    "spanish": "No puedo desbloquear este usuario, esto se debe a falta de permiso o el usuario no existe",
+    "german": "Ich kann diesen Benutzer nicht freigeben, dies liegt an fehlenden Berechtigungen oder der Benutzer existiert nicht"
+  },
+  "<name>": {
+    "english": "",
+    "french": "",
+    "spanish": "",
+    "german": ""
   }
 }
