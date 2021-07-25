@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.1",
-    "discord.js": "^13.0.0-dev.5e70694.1626955541",
+    "discord.js": "^13.0.0-dev.4886ae2.1627214570",
     "dotenv": "^10.0.0",
     "mongoose": "^5.13.3"
   }
