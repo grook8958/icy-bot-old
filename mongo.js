@@ -1,6 +1,6 @@
 module.exports = function() {
     const mongoose = require('mongoose');
-    const chalk = require('chalk')
+    const chalk = require('chalk');
 
     require('dotenv').config();
 
@@ -28,4 +28,4 @@ module.exports = function() {
         console.log(chalk.magenta('Mongoose default connection has disconnected due to application termination'));
         process.exit(0)
     });
-}
+};
