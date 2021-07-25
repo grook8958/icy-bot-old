@@ -36,6 +36,7 @@ module.exports = {
         interaction.reply({
           embeds: [errorEmbed(messages.UNBAN_FAIL[lang])]
         });
+        console.error(e)
         return
       })
 

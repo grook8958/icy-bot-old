@@ -175,6 +175,12 @@
     "spanish": "No puedo desbloquear este usuario, esto se debe a falta de permiso o el usuario no existe",
     "german": "Ich kann diesen Benutzer nicht freigeben, dies liegt an fehlenden Berechtigungen oder der Benutzer existiert nicht"
   },
+  "WARNINGS_SET": {
+    "english": "Recorded warning for {MEMBER} || {REASON}",
+    "french": "Avertissement enregistré pour {MEMBER} || {REASON}",
+    "spanish": "Aviso registrado para {MEMBER} || {REASON}",
+    "german": "Aufgenommene Warnung für {MEMBER} || {REASON}"
+  },
   "<name>": {
     "english": "",
     "french": "",
