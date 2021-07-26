@@ -60,7 +60,7 @@ const getLanguage = require('../functions/get-language');
  
    
  
-   console.log(`Registering command "${commandData.name}"`)
+   
  
    // Ensure the permissions are in an array and are all valid
    if (permissions.length) {
@@ -78,20 +78,22 @@ const getLanguage = require('../functions/get-language');
 
    //Fetch all global commands
    const globalCommands = await client.application?.commands.fetch();
-
+   
    if (deleted) {
      if (testOnly) {
-      const cmd = guildCommands.find(cmd => cmd.name === commandData.name);
+      const cmd = await guildCommands.find(cmd => cmd.name === commandData.name);
 
-      testGuild?.commands.delete(cmd);
+      await testGuild?.commands.delete(cmd);
       return
      } else {
-      const cmd = globalCommands.find(cmd => cmd.name === commandData.name);
+      const cmd = await globalCommands.find(cmd => cmd.name === commandData.name);
       
-      client.application?.commands.delete(cmd)
+      await client.application?.commands.delete(cmd)
       return
      };
    };
+
+   console.log(`Registering command "${commandData.name}"`)
 
    if (testOnly) {
     //If test only
