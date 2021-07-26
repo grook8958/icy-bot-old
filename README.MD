@@ -17,3 +17,6 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 - 24/07/2021: Added ban and unban slash-commands and added 8 new translations
 - 23/07/2021: Updated settings.js various bug fixes and added 2 translations to messages.json
 
+# Setup 
+To easily setup your workspace run `install-packages.bat`. This will install all dependencies and create the `.env` file where you will have to specify a couple of values such as the bot token and your mongodb uri.
+
