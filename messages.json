@@ -175,11 +175,49 @@
     "spanish": "No puedo desbloquear este usuario, esto se debe a falta de permiso o el usuario no existe",
     "german": "Ich kann diesen Benutzer nicht freigeben, dies liegt an fehlenden Berechtigungen oder der Benutzer existiert nicht"
   },
-  "WARNINGS_SET": {
+  "WARNING_SET": {
     "english": "Recorded warning for {MEMBER} || {REASON}",
     "french": "Avertissement enregistré pour {MEMBER} || {REASON}",
     "spanish": "Aviso registrado para {MEMBER} || {REASON}",
     "german": "Aufgenommene Warnung für {MEMBER} || {REASON}"
+  },
+  "WARNINGS_EMBED": {
+    "DESCRIPTION": {
+      "english": "All warnings for {MEMBER}",
+      "french": "Tous les avertissements pour {MEMBER}",
+      "spanish": "Todas las advertencias para {MEMBER}",
+      "german": "Alle Warnungen für {MEMBER}"
+    }
+  },
+  "DATE": {
+    "english": "Date",
+    "french": "Date",
+    "spanish": "Fecha",
+    "german": "Datum"
+  },
+  "REASON": {
+    "english": "Reason",
+    "french": "Raison",
+    "spanish": "Razón",
+    "german": "Grund"
+  },
+  "MODERATOR": {
+    "english": "Moderator",
+    "french": "Modérateur",
+    "spanish": "Moderador",
+    "german": "Moderator"
+  },
+  "WARNING": {
+    "english": "Warning",
+    "french": "Avertissement",
+    "spanish": "Advertencia",
+    "german": "Warnung"
+  },
+  "NO_WARNS": {
+    "english": "{MEMBER} does not have any warnings",
+    "french": "{MEMBER} n’a aucun avertissement",
+    "spanish": "{MEMBER} no tiene ninguna advertencia",
+    "german": "{MEMBER} hat keine Warnungen"
   },
   "<name>": {
     "english": "",
