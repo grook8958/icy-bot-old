@@ -24,7 +24,7 @@ module.exports = {
     //Get Interaction options
     const member = options.getMember('member');
     const reason = options.getString('reason'); 
-    const moderator = interaction.user.tag;
+    const moderator = interaction.user;
 
     //Language imports
     const getLanguage = require('../../functions/get-language');
@@ -53,7 +53,8 @@ module.exports = {
       id: randomUUID(),
       timestamp: Date.now(),
       reason: reason,
-      moderator: moderator
+      moderator: moderator.tag,
+      moderatorId: moderator.id 
     }
 
     await warningsSchema.findOneAndUpdate({
@@ -70,7 +71,7 @@ module.exports = {
     });
 
     interaction.reply({
-      embeds: [errorEmbed(messages.WARNING_SET[lang])]
+      embeds: [successEmbed(messages.WARNING_SET[lang].replace('{MEMBER}', member.tag).replace('{REASON}', reason))]
     });
 
   }
