@@ -219,6 +219,18 @@
     "spanish": "{MEMBER} no tiene ninguna advertencia",
     "german": "{MEMBER} hat keine Warnungen"
   },
+  "INVALID_ID": {
+    "english": "`{ID}` is an invalid id.",
+    "french": "`{ID}` est un identifiant invalide.",
+    "spanish": "`{ID}` es una identificación inválida.",
+    "german": "`{ID}` ist ein ungültiger Ausweis."
+  },
+  "WARN_REMOVE": {
+    "english": "**Removed warn `{ID}` for {MEMBER}** || {REASON}",
+    "french": "**Suppression de l’avertissement `{ID}` pour {MEMBER}** || {REASON}",
+    "spanish": "**Eliminado advertir `{ID}` para {MIEMBRO} || {REASON}**",
+    "german": "**Verwarnung für {MEMBER} wurde entfernt: warn `{ID}`** || {REASON}"
+  },
   "<name>": {
     "english": "",
     "french": "",
