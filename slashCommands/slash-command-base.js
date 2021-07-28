@@ -1,6 +1,8 @@
 
 const { Permissions } = require('discord.js');
 
+const chalk = require('chalk');
+
 const messages = require('../messages.json');
 
 const errorEmbed = require('../functions/error-embed');
@@ -93,7 +95,7 @@ const getLanguage = require('../functions/get-language');
      };
    };
 
-   console.log(`Registering command "${commandData.name}"`)
+   console.log(chalk.gray(`Registering command "${commandData.name}"`));
 
    if (testOnly) {
     //If test only
