@@ -1,13 +1,13 @@
 const path = require('path')
 const fs = require('fs')
 
-module.exports = (client) => {
+module.exports = async (client) => {
     const baseFile = 'slash-command-base.js'
     const commandBase = require(`./${baseFile}`)
 
     const slashCommands =[]
   
-    const readCommands = (dir) => {
+    const readCommands = async (dir) => {
       const files = fs.readdirSync(path.join(__dirname, dir))
       for (const file of files) {
         const stat = fs.lstatSync(path.join(__dirname, dir, file))
@@ -17,12 +17,12 @@ module.exports = (client) => {
           const option = require(path.join(__dirname, dir, file))
           slashCommands.push(option)
           if (client) {
-              commandBase(client, option)
+            commandBase(client, option)
           }
         }
       }
     }
-   readCommands('.')
+  readCommands('.')
 
    return slashCommands
 }
