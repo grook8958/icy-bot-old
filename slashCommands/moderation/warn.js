@@ -71,7 +71,7 @@ module.exports = {
     });
 
     interaction.reply({
-      embeds: [successEmbed(messages.WARNING_SET[lang].replace('{MEMBER}', member.tag).replace('{REASON}', reason))]
+      embeds: [successEmbed(messages.WARNING_SET[lang].replace('{MEMBER}', member.user.tag).replace('{REASON}', reason))]
     });
 
   }
