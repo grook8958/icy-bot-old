@@ -16,6 +16,9 @@ const mongo = require('./mongo');
 const loadCommands = require('./commands/load-commands');
 const loadSlashCommands = require('./slashCommands/load-slash-commands');
 
+//Define functions
+const wait = require('util').promisify(setTimeout);
+
 client.on('ready', async () => {
     console.log('Client logged in!');
 
@@ -23,16 +26,20 @@ client.on('ready', async () => {
 
     //Load commands
     await loadCommands(client);
+
+    await wait(3000);
     console.log(chalk.bold.green('Successfully loaded all commands'));
 
     console.log(chalk.bold.yellow('Loading slash-commands...'));
 
     //Load slash-commands
     await loadSlashCommands(client);
+
+    await wait(3000);
     
     console.log(chalk.bold.green('Successfully loaded all slash-commands'));
 
-    //Load database connectio
+    //Load database connection
     await mongo();
 });
 
