@@ -41,12 +41,18 @@ const getLanguage = require('../functions/get-language');
      'MANAGE_NICKNAMES',
      'MANAGE_ROLES',
      'MANAGE_WEBHOOKS',
-     'MANAGE_EMOJIS',
+     'MANAGE_EMOJIS_AND_STICKERS',
+     'USE_APPLICATION_COMMANDS',
+     'REQUEST_TO_SPEAK',
+     'MANAGE_THREADS',
+     'USE_PUBLIC_THREADS',
+     'USE_PRIVATE_THREADS',
+     'USE_EXTERNAL_STICKERS '
    ]
  
    for (const permission of permissions) {
      if (!validPermissions.includes(permission)) {
-       throw new Error(`Unknown permission node "${permission}"`)
+       throw new SyntaxError(`Unknown permission node "${permission}"`)
      }
    }
  }
