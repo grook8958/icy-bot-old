@@ -1,4 +1,5 @@
 const errorEmbed = require('../../functions/error-embed');
+const successEmbed = require('../../functions/success-embed');
 
 module.exports = {
   commandData: {
@@ -48,6 +49,17 @@ module.exports = {
         description: 'The new server prefix',
         required: true
       }]
+    },
+    {
+      type: 'SUB_COMMAND',
+      name: 'mute-role',
+      description: 'Change the muted role',
+      options: [{
+        type: 'ROLE',
+        name: 'new-role',
+        description: 'The new muted role',
+        required: true
+      }]
     }]
   },
   testOnly: true,
@@ -69,6 +81,9 @@ module.exports = {
         break;
       case('prefix'):
         prefix(interaction);
+        break;
+      case('mute-role'):
+        muteRole(interaction);
         break;
     }
   } 
@@ -256,7 +271,7 @@ async function view(interaction) {
 };
 
 async function language(interaction) {
-  const { value: string } = interaction.options.get('language').options.get('new-language')
+  const string = interaction.options.getString('new-language')
   
 
     const { guild } = interaction
@@ -313,7 +328,7 @@ async function prefix(interaction) {
 
   const prefixSchema = require('../../schemas/prefix-schema');
 
-  const { value: newPrefix } = interaction.options.get('prefix').options.get('new-prefix');
+  const newPrefix = interaction.options.getString('new-prefix');
 
   const split = newPrefix.split('');
 
@@ -609,3 +624,35 @@ async function resetToDefault(interaction) {
   });
 
 };
+
+async function muteRole(interaction) {
+
+  const { guild, options } = interaction
+
+  //Import functions
+  const getLanguage = require('../../functions/get-language');
+  const lang = await getLanguage(guild.id);
+  const messages = require('../../messages.json');
+  const successEmbed = require('../../functions/success-embed');
+  
+  const mutedRoleSchema = require('../../schemas/muted-role-schema');
+
+  const newRole = options.getRole('new-role');
+
+  await mutedRoleSchema.findOneAndUpdate({
+    _id: guild.id
+  },
+  {
+    _id: guild.id,
+    roleId: newRole.id
+  },
+  {
+    upsert: true
+  });
+
+  interaction.reply({
+    embeds: [successEmbed(messages.NEW_ROLE_SET[lang].replace('{ROLE}', newRole.name))]
+  });
+
+
+}
