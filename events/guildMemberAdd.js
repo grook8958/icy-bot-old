@@ -2,7 +2,7 @@ module.exports = {
 	name: 'guildMemberAdd',
 	once: false,
 	async execute(member) {
-      
+
     const { id, guild } = member; 
         
     const redis = require('../redis');
@@ -25,7 +25,9 @@ module.exports = {
 };
 
 async function giveRole(member) {
-  const mutedRole = member.guild.roles.cache.get('819225091900440597'); //Get muted role from db
+  const getMutedRole = require('../functions/get-muted-role');
+  const roleId = await getMutedRole(member.guild.id);
+  const mutedRole = member.guild.roles.cache.get(roleId); //Get muted role from db
 
   if (mutedRole) {
     await member.roles.add(mutedRole, 'Muted');
