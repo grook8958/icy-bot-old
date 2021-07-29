@@ -231,6 +231,24 @@
     "spanish": "**Eliminado advertir `{ID}` para {MIEMBRO} || {REASON}**",
     "german": "**Verwarnung für {MEMBER} wurde entfernt: warn `{ID}`** || {REASON}"
   },
+  "MUTE_SUCCESS": {
+    "english": "**{MEMBER} was muted for {DURATION}** || {REASON}",
+    "french": "**{MEMBER} a été rendu muet pour {DURATION}** || {REASON}",
+    "spanish": "**{MEMBER} fue silenciado para {DURATION}** || {REASON}",
+    "german": "**{MEMBER} wurde für {DURATION}** stummgeschaltet || {REASON}"
+  },
+  "INVALID_DURATION": {
+    "english": "`{DURATION}` is invalid.",
+    "french": "`{DURATION}` est invalide.",
+    "spanish": "`{DURATION}` no es válido.",
+    "german": "`{DURATION}` ist ungültig."
+  },
+  "NEW_ROLE_SET": {
+    "english": "Set {ROLE} as the new muted role",
+    "french": "Définir {ROLE} comme le nouveau rôle en sourdine",
+    "spanish": "Establecer {ROLE} como el nuevo rol silenciado",
+    "german": "Setze {ROLE} als neue stummgeschaltete Rolle"
+  },
   "<name>": {
     "english": "",
     "french": "",
