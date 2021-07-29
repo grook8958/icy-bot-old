@@ -20,7 +20,7 @@ module.exports = async () => {
 }
 module.exports.expire = (callback) => {
     const expired = () => {
-      const sub = redis.createClient({ url: redisPath })
+      const sub = redis.createClient({ url: process.env.REDIS_URI })
       sub.subscribe('__keyevent@0__:expired', () => {
         sub.on('message', (channel, message) => {
           callback(message)
@@ -28,6 +28,6 @@ module.exports.expire = (callback) => {
       })
     }
   
-    const pub = redis.createClient({ url: redisPath })
+    const pub = redis.createClient({ url: process.env.REDIS_URI })
     pub.send_command('config', ['set', 'notify-keyspace-events', 'Ex'], expired())
   }
