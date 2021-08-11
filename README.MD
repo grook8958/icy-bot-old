@@ -13,6 +13,7 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 *discord.js v13.0.0 is not a full release, it may contain many bugs*
 
 # Changelog
+- 11/08/2021 20:49 CEST: Removed all "normal" commands due to message becoming a priviledged intent.
 - 29/07/2021 13:37 CEST: Added mute command, 3 translations fixed a couple of bugs in index.js, redis.js and load-events.js
 - 28/07/2021 14:32 CEST: Added delete-warnings command and 2 new translastion, fixed bugs in warn.js and more bug fixes
 - 26/07/2021 15:17 CEST: Added warnings command and 6 translations & fixed some bugs
