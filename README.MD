@@ -5,12 +5,11 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 
 # Dependencies
 
-- discord.js v13.0.0-dev `npm install discord.js@dev`
+- discord.js v13.0.1 `npm install discord.js`
 - chalk v4.1.1 `npm install chalk`
 - dotenv v10.0.0 `npm install dotenv`
 - mongoose v5.13.3 `npm install mongoose`
 
-*discord.js v13.0.0 is not a full release, it may contain many bugs*
 
 # Changelog
 - 11/08/2021 20:49 CEST: Removed all "normal" commands due to message becoming a priviledged intent.
