@@ -13,7 +13,6 @@ require('dotenv').config();
 
 //Import essential files
 const mongo = require('./mongo');
-const loadCommands = require('./commands/load-commands');
 const loadSlashCommands = require('./slashCommands/load-slash-commands');
 const loadEvents = require('./load-events');
 
@@ -26,16 +25,7 @@ client.on('ready', async () => {
     //Load events
     await loadEvents(client);
     console.log(chalk.magenta('Events loaded'));
-    
-
-    console.log(chalk.bold.yellow('Loading commands...'));
-
-    //Load commands
-    await loadCommands(client);
-
-    await wait(3000);
-    console.log(chalk.bold.green('Successfully loaded all commands'));
-
+   
     console.log(chalk.bold.yellow('Loading slash-commands...'));
 
     //Load slash-commands
