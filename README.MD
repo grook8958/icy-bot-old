@@ -5,10 +5,11 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 
 # Dependencies
 
-- discord.js v13.0.1 `npm install discord.js`
-- chalk v4.1.1 `npm install chalk`
+- discord.js v13.1.0 `npm install discord.js`
+- chalk v4.1.2 `npm install chalk`
 - dotenv v10.0.0 `npm install dotenv`
-- mongoose v5.13.3 `npm install mongoose`
+- mongoose v5.13.7 `npm install mongoose`
+- redis v3.1.2 `npm install redis`
 
 
 # Changelog
@@ -21,5 +22,5 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 - 23/07/2021: Updated settings.js various bug fixes and added 2 translations to messages.json
 
 # Setup 
-To easily setup your workspace run `install-packages.bat`. This will install all dependencies and create the `.env` file where you will have to specify a couple of values such as the bot token and your mongodb uri.
+For easy setup, run `npm run setup`, this will install all required dependencies and create the required .env file in which you must fill in all the fields, then when you think everything is correctly setup run `npm run debug` to check everything is working properly. If everything is okay, run the bot with `npm run start`.
 
