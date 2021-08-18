@@ -1,0 +1,11 @@
+{
+  "name": "icy-debugger",
+  "version": "1.0.0",
+  "description": "A debug to check if everything is working correctly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "grook8958",
+  "license": "ISC"
+}
