@@ -5,11 +5,11 @@ A multi-purpose discord bot using the latest features of discord using the [Node
 
 # Dependencies
 
-- discord.js v13.1.0 `npm install discord.js`
-- chalk v4.1.2 `npm install chalk`
-- dotenv v10.0.0 `npm install dotenv`
-- mongoose v5.13.7 `npm install mongoose`
-- redis v3.1.2 `npm install redis`
+- [discord.js](npmjs.com/discord.js) v13.1.0 `npm install discord.js`
+- [chalk](npmjs.com/chalk) v4.1.2 `npm install chalk`
+- [dotenv](npmjs.com/dotenv) v10.0.0 `npm install dotenv`
+- [mongoose](npmjs.com/mongoose) v5.13.7 `npm install mongoose`
+- [redis](npmjs.com/redis) v3.1.2 `npm install redis`
 
 
 # Changelog
